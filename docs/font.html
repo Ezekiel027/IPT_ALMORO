@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Adjuster</title>
+    <link rel="stylesheet" href=CSS/style4.css>
+
+</head>
+<body>
+
+    <h2>Size Adjuster</h2>
+
+    <div class="column-box"> 
+        <button id="increase" onclick="changeFontSize('increase')">Increase Size</button>
+        <button id="decrease" onclick="changeFontSize('decrease')">Decrease Size</button>
+        <p id="text">EZEKIEL</p>
+        <a href="mdas.html"> TO MDAS </a>
+    </div>
+
+    <script>
+        let currentFontSize = 16;
+
+        function changeFontSize(action) {
+            const paragraph = document.getElementById('text');
+
+            if (action === 'increase') {
+                currentFontSize += 2;
+            } else if (action === 'decrease') {
+                currentFontSize -= 2;
+            }
+
+            paragraph.style.fontSize = currentFontSize + 'px';
+        }
+    </script>
+
+</body>
+</html>
